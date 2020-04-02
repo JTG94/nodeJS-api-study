@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-api-study",
+  "version": "1.0.0",
+  "description": "study project",
+  "main": "index.js",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JTG94/nodeJS-api-study.git"
+  },
+  "author": "JTG94",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JTG94/nodeJS-api-study/issues"
+  },
+  "homepage": "https://github.com/JTG94/nodeJS-api-study#readme"
+}
