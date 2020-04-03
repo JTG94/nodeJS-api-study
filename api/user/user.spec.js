@@ -1,6 +1,8 @@
+// user api test code
+
 const request = require('supertest');
 const should = require('should');
-const app = require('./index');
+const app = require('../../');
 
 //test 수트
 describe('GET /users는 ', () => {
@@ -31,14 +33,14 @@ describe('GET /users는 ', () => {
                 .get('/users?limit=two')
                 .expect(400) //should로 검증할수 있지만 상태코드 검증 메서드를 제공한다.
                 .end(done);
-                /*
-                .end((err, res) => {
-                    done();  
-                })
-                */
+            /*
+            .end((err, res) => {
+                done();  
+            })
+            */
         })
     })
-   
+
 });
 
 //user 단건 조회 테스트
@@ -65,7 +67,7 @@ describe('GET /users/1는', () => {
                 .get('/users/999')
                 .expect(404)
                 .end(done);
-        });        
+        });
     });
 });
 
@@ -96,7 +98,7 @@ describe('POST /users', () => {
         before(done => {
             request(app)
                 .post('/users')
-                .send({name}) //body값 입력
+                .send({ name }) //body값 입력
                 .expect(201)
                 .end((err, res) => {
                     body = res.body;
@@ -121,7 +123,7 @@ describe('POST /users', () => {
         it('name 중복인 경우 409을 반환한다', done => {
             request(app)
                 .post('/users')
-                .send({name: 'daniel'})
+                .send({ name: 'daniel' })
                 .expect(409)
                 .end(done)
         });
@@ -135,7 +137,7 @@ describe('PUT /users/:id', () => {
             const name = 'chally';
             request(app)
                 .put('/users/3')
-                .send({name})
+                .send({ name })
                 .end((err, res) => {
                     res.body.should.have.property('name', name);
                     done();
@@ -159,14 +161,14 @@ describe('PUT /users/:id', () => {
         it('없는 유저일 경우 404을 응답한다', done => {
             request(app)
                 .put('/users/999')
-                .send({name: 'foo'})
+                .send({ name: 'foo' })
                 .expect(404)
                 .end(done);
         });
         it('이름이 중복일 경우 409을 응답한다', done => {
             request(app)
                 .put('/users/3')
-                .send({name: 'bek'})
+                .send({ name: 'bek' })
                 .expect(409)
                 .end(done);
         });
