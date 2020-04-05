@@ -8,7 +8,9 @@
     "body-parser": "^1.19.0",
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "sequelize": "^5.21.6",
+    "sqlite3": "^4.1.1"
   },
   "devDependencies": {
     "mocha": "^7.1.1",
@@ -16,7 +18,7 @@
     "supertest": "^4.0.2"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha api/user/user.spec.js",
+    "test": "cross-env NODE_ENV=test mocha api/user/user.spec.js -w",
     "start": "node bin/www.js"
   },
   "repository": {
