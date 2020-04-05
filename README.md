@@ -12,4 +12,4 @@
 
 - DB는 sqlite(파일 디비) 사용
 
-개념 정리 : https://github.com/JTG94/nodeJS-api-study/wiki
+개념 정리 : https://github.com/JTG94/nodeJS-api-study/wiki/Node.js-Study
