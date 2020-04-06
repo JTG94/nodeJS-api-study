@@ -13,3 +13,4 @@
 - DB는 sqlite(파일 디비) 사용
 
 개념 정리 : https://github.com/JTG94/nodeJS-api-study/wiki/Node.js-Study
+         : https://github.com/JTG94/nodeJS-api-study/wiki/ES6-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC
